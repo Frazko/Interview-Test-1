@@ -1,0 +1,12 @@
+#home {
+    //background-color: #213213;
+    
+    
+
+    @include breakpoint('phone') {
+        //background-color: #951621;
+    }
+    @include breakpoint('tablet') {
+        //background-color: #147283;
+    }
+}

@@ -1,0 +1,65 @@
+nav {
+    background-color: #F7FCFD;
+    font-size: 0.9em;
+    height: 50px;
+    #navigation {
+        display: inline-block;
+        .navLogo {
+            margin: 0 auto;
+            width: 200px;
+            height: 50px;
+            #companyLogoNav {
+                background: url(../images/companyLogo.png) no-repeat center center;
+                width: 200px;
+                height: 50px;
+                text-align: center;
+            }
+        }
+        .navItems {
+            margin: 0 auto;
+            width: 300px;
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                li {
+                    display: inline-block;
+                    width: 70px;
+                    margin: 15px auto;
+                    //border: 3px solid #8AC007;
+                    text-align: center;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+            }
+        }
+        a:link,
+        a:hover,
+        a:visited {
+            text-decoration: none;
+        }
+        #signInNav {
+            width: 80px;
+            height: 25px;
+            background-color: $lightBlue;
+            border-radius: 20px;
+            margin-top: -5px;
+            padding-top: 5px;
+            color: #fff;
+        }
+        #signInNav:hover {
+            background-color: #2BE2FD;
+        }
+        display: block;
+    }
+    @include breakpoint('phone') {
+        height: 100px;
+        //background-color: #FFAAAA;
+    }
+    @include breakpoint('tablet-p') {
+        height: 100px;
+        //background-color: #AAAAFF;
+    }
+    @include breakpoint('desktop') {}
+}

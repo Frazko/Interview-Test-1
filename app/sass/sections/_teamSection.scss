@@ -1,0 +1,64 @@
+.teamSection {
+    background: $lightBlue;
+    min-height: 340px;
+    height: auto;
+    color: $white;
+    font-size: 0.9em;
+    .copy-wrapper {
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+        padding: 20px;
+    }
+    .images {
+        display: inline-block;
+        padding-top: 20px;
+        div {
+            display: inline-block;
+            text-align: center;
+            //border: 1px solid #000;
+            padding: 20px;
+        }
+        .caption {
+            padding-top: 8px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            .bolder {
+                font-weight: 700;
+            }
+        }
+        #image1 {
+            background: url(../images/barak.png) no-repeat center center / cover;
+            width: $avatarImageSize;
+            height: $avatarImageSize;
+            display: inline-block;
+        }
+        #image2 {
+            background: url(../images/loco1.png) no-repeat center center / cover;
+            width: $avatarImageSize;
+            height: $avatarImageSize;
+            display: inline-block;
+        }
+        #image3 {
+            background: url(../images/loco2.png) no-repeat center center / cover;
+            width: $avatarImageSize;
+            height: $avatarImageSize;
+            display: inline-block;
+        }
+    }
+    #workWithUs {
+        width: 120px;
+        height: 25px;
+        background-color: $lightBlue;
+        border-radius: 20px;
+        margin: 10px auto;
+        color: #fff;
+        border: 1px solid #fff;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+    #workWithUs:hover {
+        background-color: #2BE2FD;
+    }
+}

@@ -1,0 +1,13 @@
+.aboutSection {
+    background: $white;
+    height: 160px;
+    h1 {
+        color: $lightBlue;
+    }
+    .copy-wrapper {
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+        padding: 40px 20px 20px 40px;
+    }
+}

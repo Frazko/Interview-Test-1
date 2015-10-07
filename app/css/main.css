@@ -1,0 +1,519 @@
+/* main */
+/*-----------------------------------------------------------------------------------CHARSET SECTION */
+/*-----------------------------------------------------------------------------------RESET SECTION */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+div, p, span, article, a {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*-----------------------------------------------------------------------------------COMPAS SECTION */
+/*-----------------------------------------------------------------------------------GLOBAL SECTION */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* default state */
+.state-indicator {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+  z-index: 1;
+}
+@media screen and (min-width: 1px) and (max-width: 599px) {
+  .state-indicator {
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 983px) {
+  .state-indicator {
+    z-index: 2;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .state-indicator {
+    z-index: 3;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 983px) {
+  .state-indicator {
+    z-index: 4;
+  }
+}
+@media screen and (min-width: 984px) {
+  .state-indicator {
+    z-index: 5;
+  }
+}
+
+nav {
+  background-color: #F7FCFD;
+  font-size: 0.9em;
+  height: 50px;
+}
+nav #navigation {
+  display: inline-block;
+  display: block;
+}
+nav #navigation .navLogo {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+}
+nav #navigation .navLogo #companyLogoNav {
+  background: url(../images/companyLogo.png) no-repeat center center;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+nav #navigation .navItems {
+  margin: 0 auto;
+  width: 300px;
+}
+nav #navigation .navItems ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+nav #navigation .navItems ul li {
+  display: inline-block;
+  width: 70px;
+  margin: 15px auto;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+nav #navigation a:link,
+nav #navigation a:hover,
+nav #navigation a:visited {
+  text-decoration: none;
+}
+nav #navigation #signInNav {
+  width: 80px;
+  height: 25px;
+  background-color: #0bbfda;
+  border-radius: 20px;
+  margin-top: -5px;
+  padding-top: 5px;
+  color: #fff;
+}
+nav #navigation #signInNav:hover {
+  background-color: #2BE2FD;
+}
+@media screen and (min-width: 1px) and (max-width: 599px) {
+  nav {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  nav {
+    height: 100px;
+  }
+}
+
+#mainDescr {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+#frontend {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+#olahtml {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+#olaflash {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+/*section imports*/
+/*-----------------------------------------------------------------------------------nav SECTION  */
+nav {
+  background-color: #F7FCFD;
+  font-size: 0.9em;
+  height: 50px;
+}
+nav #navigation {
+  display: inline-block;
+  display: block;
+}
+nav #navigation .navLogo {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+}
+nav #navigation .navLogo #companyLogoNav {
+  background: url(../images/companyLogo.png) no-repeat center center;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+nav #navigation .navItems {
+  margin: 0 auto;
+  width: 300px;
+}
+nav #navigation .navItems ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+nav #navigation .navItems ul li {
+  display: inline-block;
+  width: 70px;
+  margin: 15px auto;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+nav #navigation a:link,
+nav #navigation a:hover,
+nav #navigation a:visited {
+  text-decoration: none;
+}
+nav #navigation #signInNav {
+  width: 80px;
+  height: 25px;
+  background-color: #0bbfda;
+  border-radius: 20px;
+  margin-top: -5px;
+  padding-top: 5px;
+  color: #fff;
+}
+nav #navigation #signInNav:hover {
+  background-color: #2BE2FD;
+}
+@media screen and (min-width: 1px) and (max-width: 599px) {
+  nav {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  nav {
+    height: 100px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------home SECTION */
+/*-----------------------------------------------------------------------------------location SECTION */
+.locationSection {
+  background-color: #003366;
+}
+.locationSection #gmap {
+  width: 500px;
+  height: 300px;
+}
+.locationSection .angular-google-map-container {
+  height: 300px;
+}
+
+/*-----------------------------------------------------------------------------------teamS SECTION */
+.teamSection {
+  background: #0bbfda;
+  min-height: 340px;
+  height: auto;
+  color: white;
+  font-size: 0.9em;
+}
+.teamSection .copy-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+}
+.teamSection .images {
+  display: inline-block;
+  padding-top: 20px;
+}
+.teamSection .images div {
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+}
+.teamSection .images .caption {
+  padding-top: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.teamSection .images .caption .bolder {
+  font-weight: 700;
+}
+.teamSection .images #image1 {
+  background: url(../images/barak.png) no-repeat center center/cover;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.teamSection .images #image2 {
+  background: url(../images/loco1.png) no-repeat center center/cover;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.teamSection .images #image3 {
+  background: url(../images/loco2.png) no-repeat center center/cover;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.teamSection #workWithUs {
+  width: 120px;
+  height: 25px;
+  background-color: #0bbfda;
+  border-radius: 20px;
+  margin: 10px auto;
+  color: #fff;
+  border: 1px solid #fff;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.teamSection #workWithUs:hover {
+  background-color: #2BE2FD;
+}
+
+/*-----------------------------------------------------------------------------------mision SECTION */
+.misionSection {
+  background: white url(../images/img1.jpg) no-repeat center center/cover;
+  height: 500px;
+  color: white;
+}
+.misionSection .h1-bullet {
+  font-size: 0.5em;
+}
+.misionSection .copy-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 380px 20px 20px 40px;
+}
+
+/*-----------------------------------------------------------------------------------about SECTION */
+.aboutSection {
+  background: white;
+  height: 160px;
+}
+.aboutSection h1 {
+  color: #0bbfda;
+}
+.aboutSection .copy-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 40px 20px 20px 40px;
+}
+
+/*-----------------------------------------------------------------------------------footer SECTION */
+footer .footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+footer .footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+footer .footer-distributed .footer-right {
+  width: 80%;
+}
+footer .footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+footer .footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+footer .footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+footer .footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 1px) and (max-width: 599px) {
+  footer .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+  footer .footer-distributed .footer-center,
+  footer .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  footer .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 983px) {
+  footer .footer-distributed {
+    font: bold 14px;
+  }
+  footer .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+/*-----------------------------------------------------------------------------------global SECTION */
+html {
+  height: 100%;
+}
+
+ul {
+  margin-bottom: 2em;
+}
+
+li,
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  /* */
+  box-sizing: border-box;
+  font-size: 62.5%;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+body header,
+body section {
+  margin: 0;
+  padding: 0;
+}
+body .main-wrapper {
+  position: relative;
+  min-height: 700px;
+  height: 100%;
+  margin-bottom: 60px;
+}
